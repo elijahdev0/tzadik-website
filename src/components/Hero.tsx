@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Shield, ChevronDown } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const Hero = () => {
   const scrollToProducts = () => {
@@ -35,19 +34,19 @@ const Hero = () => {
         <div className="bg-black/60 p-6 rounded-lg mb-10 max-w-2xl mx-auto">
           <ul className="text-lg mb-8 space-y-4 text-right">
             <li className="flex items-center justify-end gap-2">
-              <span>רישיון לנשק עד 14 ימי עסקים בלבד!</span>
+              <span>משיכת פיקדון צבאי במחיר מיוחד - ₪1,000</span>
               <span className="text-oneshot-gold text-2xl">✓</span>
             </li>
             <li className="flex items-center justify-end gap-2">
-              <span>במחיר נוח החל מ-999 ₪!</span>
+              <span>רישיון נשק עד 14 ימי עסקים - ₪1,599</span>
               <span className="text-oneshot-gold text-2xl">✓</span>
             </li>
             <li className="flex items-center justify-end gap-2">
-              <span>תשלום רק לאחר קבלת הרישיון בחבילת הפרימיום!</span>
+              <span>חבילה משולבת - משיכת פיקדון + רישיון נשק - ₪2,299</span>
               <span className="text-oneshot-gold text-2xl">✓</span>
             </li>
             <li className="flex items-center justify-end gap-2">
-              <span>מקסימום ביטחון, מינימום בירוקרטיה</span>
+              <span>תשלום רק לאחר קבלת הרישיון!</span>
               <span className="text-oneshot-gold text-2xl">✓</span>
             </li>
           </ul>
