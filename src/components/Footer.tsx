@@ -9,15 +9,15 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-black text-white py-12 px-4">
+    <footer className="bg-oneshot-dark text-white py-12 px-4">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center mb-8">
           <div className="mb-6 md:mb-0">
             <div className="flex items-center justify-center md:justify-start">
               <img 
-                src="/images/logo.png"
+                src="/images/logo.jpeg"
                 alt="One Shot Logo"
-                className="h-12 w-auto"
+                className="h-24 w-24 object-contain"
               />
             </div>
             
@@ -25,7 +25,7 @@ const Footer = () => {
             <div className="mt-4 flex flex-col items-center md:items-start">
               <Button
                 onClick={scrollToContact}
-                className="bg-oneshot-red text-white hover:bg-red-800 mb-2"
+                className="bg-oneshot-red hover:bg-red-700 text-white mb-2"
                 size="sm"
               >
                 <span>צרו קשר עכשיו</span>
@@ -64,7 +64,7 @@ const Footer = () => {
             href="https://facebook.com/oneshot" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="bg-oneshot-gold/20 hover:bg-oneshot-gold/40 p-3 rounded-full transition-colors"
+            className="bg-oneshot-green hover:bg-oneshot-green/80 p-3 rounded-full transition-colors"
             aria-label="Facebook"
           >
             <Facebook className="h-6 w-6 text-oneshot-gold" />
@@ -73,7 +73,7 @@ const Footer = () => {
             href="https://instagram.com/oneshot" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="bg-oneshot-gold/20 hover:bg-oneshot-gold/40 p-3 rounded-full transition-colors"
+            className="bg-oneshot-green hover:bg-oneshot-green/80 p-3 rounded-full transition-colors"
             aria-label="Instagram"
           >
             <Instagram className="h-6 w-6 text-oneshot-gold" />
@@ -82,19 +82,19 @@ const Footer = () => {
         
         {/* Products Quick Links */}
         <div className="flex justify-center gap-6 mb-8 flex-wrap">
-          <Link to="/products" className="bg-oneshot-gray/40 hover:bg-oneshot-gray/60 px-4 py-2 rounded-md text-oneshot-gold font-semibold transition-colors">
-            מסלול רגיל - ₪999
-          </Link>
-          <Link to="/products" className="bg-oneshot-gray/40 hover:bg-oneshot-gray/60 px-4 py-2 rounded-md text-oneshot-gold font-semibold transition-colors">
-            חבילת פרימיום - ₪1,599
-          </Link>
-          <Link to="/products" className="bg-oneshot-gray/40 hover:bg-oneshot-gray/60 px-4 py-2 rounded-md text-oneshot-gold font-semibold transition-colors">
-            מסלול לחיילים משוחררים
-          </Link>
+          <div className="bg-oneshot-green hover:bg-oneshot-green/80 px-4 py-2 rounded-md text-oneshot-gold font-semibold transition-colors">
+            משיכת פיקדון צבאי - ₪1,000
+          </div>
+          <div className="bg-oneshot-green hover:bg-oneshot-green/80 px-4 py-2 rounded-md text-oneshot-gold font-semibold transition-colors">
+            רישיון נשק - ₪1,599
+          </div>
+          <div className="bg-oneshot-green hover:bg-oneshot-green/80 px-4 py-2 rounded-md text-oneshot-gold font-semibold transition-colors">
+            חבילה משולבת - ₪2,299
+          </div>
         </div>
         
         <div className="border-t border-oneshot-gold/20 pt-8 text-center">
-          <p className="text-sm text-gray-400">
+          <p className="text-sm text-oneshot-light">
             © {new Date().getFullYear()} One Shot - הדרך המהירה לרישיון נשק. כל הזכויות שמורות.
           </p>
         </div>

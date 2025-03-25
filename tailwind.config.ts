@@ -63,10 +63,10 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				oneshot: {
-					'dark': '#121212',
-					'green': '#1a472a',
-					'red': '#b71c1c',
-					'gold': '#d4af37',
+					'dark': '#0B2318',
+					'green': '#1B4027',
+					'red': '#C41E3A',
+					'gold': '#D4B053',
 					'gray': '#333333',
 					'light': '#f5f5f5'
 				}
