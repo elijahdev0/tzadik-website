@@ -53,7 +53,7 @@ const FAQ = () => {
   };
 
   return (
-    <section className="py-20 relative overflow-hidden" id="faq">
+    <section className="py-20 pb-32 relative overflow-hidden" id="faq">
       {/* Background elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-oneshot-dark to-oneshot-green/20"></div>
       <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-5"></div>
