@@ -74,7 +74,7 @@ const Header = () => {
         transition={{ duration: 0.5 }}
         className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? 'bg-oneshot-dark/90 backdrop-blur-md shadow-lg border-b border-oneshot-gold/10' 
+            ? 'bg-oneshot-dark/90 shadow-lg border-b border-oneshot-gold/10' 
             : 'bg-transparent'
         }`}
       >
@@ -119,7 +119,7 @@ const Header = () => {
             {/* Mobile menu button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden text-white hover:text-oneshot-gold transition-colors"
+              className="md:hidden text-white hover:text-oneshot-gold transition-colors relative z-50"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? (
@@ -143,7 +143,7 @@ const Header = () => {
             className="fixed inset-0 z-40 md:hidden"
           >
             <div 
-              className="mobile-menu-backdrop fixed inset-0 bg-black/50 backdrop-blur-sm" 
+              className="fixed inset-0 bg-black/50 backdrop-blur-sm" 
               onClick={() => setMobileMenuOpen(false)} 
             />
             <motion.nav
@@ -151,7 +151,7 @@ const Header = () => {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ duration: 0.3, ease: 'easeInOut' }}
-              className="fixed top-0 right-0 bottom-0 w-72 bg-oneshot-dark/95 border-l border-oneshot-gold/20 shadow-xl p-6 overflow-y-auto"
+              className="fixed top-0 right-0 bottom-0 w-72 bg-oneshot-dark border-l border-oneshot-gold/20 shadow-xl p-6 overflow-y-auto"
             >
               <div className="flex justify-between items-center mb-8">
                 <h3 className="text-xl font-bold text-oneshot-gold">תפריט</h3>
