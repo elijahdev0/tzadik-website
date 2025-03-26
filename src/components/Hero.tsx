@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Hero = () => {
   const scrollToProducts = () => {
@@ -19,67 +20,133 @@ const Hero = () => {
   };
 
   return (
-    <div className="bg-oneshot-dark min-h-[90vh] flex flex-col items-center justify-center text-center px-4 py-20">
-      <div className="max-w-5xl mx-auto">
-        <div className="mb-6 inline-block">
+    <div className="relative min-h-screen flex flex-col items-center justify-center bg-cover bg-center overflow-hidden" 
+         style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('/images/hero-background.jpg')" }}>
+      
+      {/* Background Overlay with Texture */}
+      <div className="absolute inset-0 bg-oneshot-dark opacity-70 z-0"></div>
+      
+      {/* Content */}
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="relative z-10 flex flex-col items-center justify-center text-center px-4 py-20 max-w-6xl mx-auto"
+      >
+        <motion.div 
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+          className="mb-8 inline-block bg-oneshot-gold/10 p-3 rounded-full backdrop-blur-sm"
+        >
           <img 
             src="/images/logo.jpeg" 
             alt="One Shot Logo" 
-            className="w-48 h-48 mx-auto mb-2"
+            className="w-40 h-40 md:w-48 md:h-48 rounded-full shadow-2xl border-2 border-oneshot-gold/50"
           />
-        </div>
-        <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white">
-          <span className="text-oneshot-gold">הדרך המהירה</span> לרישיון נשק
-        </h1>
-        <h2 className="text-2xl md:text-3xl mb-4 text-oneshot-light">
-          מהיר, מקצועי, ללא סיבוכים - תוך <span className="text-oneshot-red font-bold">14 ימי עסקים בלבד!</span>
-        </h2>
-        <p className="text-xl mb-8 text-oneshot-light">
-          ליווי אישי מקצה לקצה, חיסכון בזמן יקר וביורוקרטיה מיותרת
-        </p>
+        </motion.div>
         
-        <div className="bg-oneshot-green/90 p-6 rounded-lg mb-10 max-w-2xl mx-auto border border-oneshot-gold/20">
-          <ul className="text-lg mb-8 space-y-4 text-right">
-            <li className="flex items-center justify-end gap-2">
-              <span className="text-oneshot-light">משיכת פיקדון צבאי במחיר מיוחד - ₪1,000</span>
-              <span className="text-oneshot-gold text-2xl">✓</span>
-            </li>
-            <li className="flex items-center justify-end gap-2">
-              <span className="text-oneshot-light">רישיון נשק עד 14 ימי עסקים - ₪1,599</span>
-              <span className="text-oneshot-gold text-2xl">✓</span>
-            </li>
-            <li className="flex items-center justify-end gap-2">
-              <span className="text-oneshot-light">חבילה משולבת - משיכת פיקדון + רישיון נשק - ₪2,299</span>
-              <span className="text-oneshot-gold text-2xl">✓</span>
-            </li>
-            <li className="flex items-center justify-end gap-2">
-              <span className="text-oneshot-light">תשלום רק לאחר קבלת הרישיון!</span>
-              <span className="text-oneshot-gold text-2xl">✓</span>
-            </li>
+        <motion.h1 
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.6 }}
+          className="text-5xl md:text-7xl font-extrabold mb-6 text-white leading-tight"
+        >
+          <span className="text-oneshot-gold drop-shadow-lg">הדרך המהירה</span> <br className="md:hidden" />
+          לרישיון נשק
+        </motion.h1>
+        
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6, duration: 0.6 }}
+          className="text-2xl md:text-3xl mb-6 text-oneshot-light font-light"
+        >
+          מהיר, מקצועי, ללא סיבוכים - תוך <span className="text-oneshot-gold font-bold inline-block transform hover:scale-105 transition-transform">14 ימי עסקים בלבד!</span>
+        </motion.h2>
+        
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8, duration: 0.6 }}
+          className="backdrop-blur-md bg-oneshot-green/30 p-8 rounded-2xl mb-10 max-w-2xl mx-auto border border-oneshot-gold/30 shadow-xl"
+        >
+          <ul className="text-lg mb-8 space-y-6 text-right">
+            <motion.li 
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 1.0, duration: 0.4 }}
+              className="flex items-center justify-end gap-3 hover:translate-x-[-5px] transition-transform"
+            >
+              <span className="text-white font-medium">משיכת פיקדון צבאי במחיר מיוחד - ₪1,000</span>
+              <span className="text-oneshot-gold text-3xl">✓</span>
+            </motion.li>
+            <motion.li 
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 1.1, duration: 0.4 }}
+              className="flex items-center justify-end gap-3 hover:translate-x-[-5px] transition-transform"
+            >
+              <span className="text-white font-medium">רישיון נשק עד 14 ימי עסקים - ₪1,599</span>
+              <span className="text-oneshot-gold text-3xl">✓</span>
+            </motion.li>
+            <motion.li 
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 1.2, duration: 0.4 }}
+              className="flex items-center justify-end gap-3 hover:translate-x-[-5px] transition-transform"
+            >
+              <span className="text-white font-medium">חבילה משולבת - משיכת פיקדון + רישיון נשק - ₪2,299</span>
+              <span className="text-oneshot-gold text-3xl">✓</span>
+            </motion.li>
+            <motion.li 
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 1.3, duration: 0.4 }}
+              className="flex items-center justify-end gap-3 hover:translate-x-[-5px] transition-transform"
+            >
+              <span className="text-white font-medium">תשלום רק לאחר קבלת הרישיון!</span>
+              <span className="text-oneshot-gold text-3xl">✓</span>
+            </motion.li>
           </ul>
-        </div>
+        </motion.div>
 
-        <div className="flex flex-col md:flex-row gap-4 justify-center mb-8">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.4, duration: 0.6 }}
+          className="flex flex-col md:flex-row gap-5 justify-center mb-10"
+        >
           <Button 
             onClick={scrollToContact}
-            className="cta-button bg-oneshot-red hover:bg-red-700 text-white text-xl py-6 px-10 font-bold animate-pulse-gold"
+            className="bg-gradient-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white text-xl py-7 px-12 font-bold rounded-xl shadow-lg hover:shadow-red-500/30 transform hover:scale-105 transition-all duration-300"
           >
             השאירו פרטים עכשיו!
           </Button>
           <Button
             onClick={scrollToProducts}
-            className="bg-oneshot-gold hover:bg-oneshot-gold/90 text-oneshot-dark text-xl py-6 px-10 font-bold"
+            className="bg-gradient-to-r from-oneshot-gold to-amber-600 hover:from-amber-500 hover:to-amber-700 text-oneshot-dark text-xl py-7 px-12 font-bold rounded-xl shadow-lg hover:shadow-oneshot-gold/30 transform hover:scale-105 transition-all duration-300"
           >
             לצפייה במסלולים שלנו
           </Button>
-        </div>
+        </motion.div>
         
         {/* Scroll Indicator */}
-        <div className="mt-6 animate-bounce cursor-pointer" onClick={scrollToProducts}>
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.6, duration: 0.6 }}
+          className="mt-6 animate-bounce cursor-pointer" 
+          onClick={scrollToProducts}
+        >
           <div className="text-oneshot-gold text-sm mb-2">לחץ לצפייה במסלולים</div>
           <ChevronDown className="w-8 h-8 text-oneshot-gold mx-auto" />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
+      
+      {/* Decorative Elements */}
+      <div className="absolute top-0 right-0 w-64 h-64 bg-oneshot-gold/10 rounded-full filter blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-oneshot-green/10 rounded-full filter blur-3xl"></div>
     </div>
   );
 };
