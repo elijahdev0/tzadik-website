@@ -142,7 +142,10 @@ const Header = () => {
             transition={{ duration: 0.2 }}
             className="fixed inset-0 z-40 md:hidden"
           >
-            <div className="mobile-menu-backdrop" onClick={() => setMobileMenuOpen(false)} />
+            <div 
+              className="mobile-menu-backdrop fixed inset-0 bg-black/50 backdrop-blur-sm" 
+              onClick={() => setMobileMenuOpen(false)} 
+            />
             <motion.nav
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
