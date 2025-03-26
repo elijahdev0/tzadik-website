@@ -12,11 +12,8 @@ const Hero = () => {
     });
   };
   
-  const scrollToContact = () => {
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-      contactForm.scrollIntoView({ behavior: 'smooth' });
-    }
+  const redirectToWhatsApp = () => {
+    window.location.href = "https://wa.me/972537124171"; // Israeli number in international format
   };
 
   return (
@@ -154,10 +151,10 @@ const Hero = () => {
           className="flex flex-col md:flex-row gap-5 justify-center mb-10"
         >
           <Button 
-            onClick={scrollToContact}
+            onClick={redirectToWhatsApp}
             className="bg-gradient-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white text-xl py-7 px-12 font-bold rounded-xl shadow-lg hover:shadow-red-500/30 transform hover:scale-105 transition-all duration-300 relative overflow-hidden group"
           >
-            <span className="relative z-10">השאירו פרטים עכשיו!</span>
+            <span className="relative z-10">פתיחת WhatsApp עכשיו!</span>
             <span className="absolute -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-40 group-hover:animate-shine" />
           </Button>
           <Button

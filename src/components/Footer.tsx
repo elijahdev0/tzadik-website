@@ -5,6 +5,12 @@ import { motion } from 'framer-motion';
 
 const Footer = () => {
   const scrollToSection = (sectionId: string) => {
+    if (sectionId === 'contact-form') {
+      // Redirect to WhatsApp
+      window.location.href = "https://wa.me/972537124171"; // Israeli number in international format
+      return;
+    }
+    
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
@@ -32,11 +38,11 @@ const Footer = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button
                 onClick={() => scrollToSection('contact-form')}
-                className="bg-oneshot-gold hover:bg-oneshot-gold/90 text-oneshot-dark font-semibold px-6 py-6 h-auto w-full sm:w-auto relative overflow-hidden group"
+                className="bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-6 h-auto w-full sm:w-auto relative overflow-hidden group"
               >
                 <span className="relative z-10 flex items-center">
                   <CheckCircle className="mr-2 h-5 w-5" />
-                  <span>השאירו פרטים עכשיו</span>
+                  <span>פתיחת WhatsApp עכשיו</span>
                 </span>
                 <span className="absolute -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-40 group-hover:animate-shine" />
               </Button>
@@ -135,7 +141,7 @@ const Footer = () => {
                   onClick={() => scrollToSection('contact-form')}
                   className="text-gray-300 hover:text-oneshot-gold transition-colors"
                 >
-                  צור קשר
+                  צור קשר (WhatsApp)
                 </button>
               </li>
             </ul>

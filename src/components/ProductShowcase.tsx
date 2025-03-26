@@ -4,11 +4,8 @@ import { Shield, Star, CheckCircle, ArrowRight, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const ProductShowcase = () => {
-  const scrollToContact = () => {
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-      contactForm.scrollIntoView({ behavior: 'smooth' });
-    }
+  const redirectToWhatsApp = () => {
+    window.location.href = "https://wa.me/972537124171"; // Israeli number in international format
   };
 
   const container = {
@@ -95,7 +92,7 @@ const ProductShowcase = () => {
               </div>
               
               <Button 
-                onClick={scrollToContact}
+                onClick={redirectToWhatsApp}
                 className="relative overflow-hidden bg-oneshot-red hover:bg-red-800 text-white text-lg py-4 px-6 rounded-xl w-full shadow-lg group-hover:shadow-red-600/30 transition-all duration-300"
               >
                 <span className="relative z-10 flex items-center justify-center gap-2">
@@ -158,7 +155,7 @@ const ProductShowcase = () => {
               </div>
               
               <Button 
-                onClick={scrollToContact}
+                onClick={redirectToWhatsApp}
                 className="relative overflow-hidden bg-oneshot-gold hover:bg-amber-600 text-oneshot-dark text-lg py-4 px-6 rounded-xl w-full font-bold shadow-lg group-hover:shadow-oneshot-gold/40 transition-all duration-300"
               >
                 <span className="relative z-10 flex items-center justify-center gap-2">
@@ -214,7 +211,7 @@ const ProductShowcase = () => {
               </div>
               
               <Button 
-                onClick={scrollToContact}
+                onClick={redirectToWhatsApp}
                 className="relative overflow-hidden bg-oneshot-green hover:bg-green-800 text-white text-lg py-4 px-6 rounded-xl w-full shadow-lg group-hover:shadow-green-600/30 transition-all duration-300"
               >
                 <span className="relative z-10 flex items-center justify-center gap-2">
@@ -240,7 +237,7 @@ const ProductShowcase = () => {
               אנחנו מקצרים לך את הדרך לרישיון נשק – בלי כאבי ראש ובלי סיבוכים!
             </p>
             <Button 
-              onClick={scrollToContact}
+              onClick={redirectToWhatsApp}
               className="relative overflow-hidden bg-gradient-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white text-xl py-6 px-10 font-bold rounded-xl shadow-lg hover:shadow-red-500/30 transform hover:scale-105 transition-all duration-300"
             >
               <span className="relative z-10">השאירו פרטים עכשיו!</span>

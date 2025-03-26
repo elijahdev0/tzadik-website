@@ -16,8 +16,15 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   
-  // Scroll to section
+  // Scroll to section or redirect to WhatsApp
   const scrollToSection = (sectionId: string) => {
+    if (sectionId === 'contact-form') {
+      // Redirect to WhatsApp
+      window.location.href = "https://wa.me/972537124171"; // Israeli number in international format
+      setMobileMenuOpen(false);
+      return;
+    }
+    
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
@@ -55,6 +62,9 @@ const Header = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [navItems]);
+
+  // Update CTA button text
+  const ctaButtonText = 'פתיחת WhatsApp';
 
   return (
     <>
@@ -99,9 +109,9 @@ const Header = () => {
             <div className="hidden md:block relative overflow-hidden rounded-full">
               <Button
                 onClick={() => scrollToSection('contact-form')}
-                className="bg-oneshot-gold hover:bg-oneshot-gold/90 text-oneshot-dark font-semibold relative z-10 px-6 overflow-hidden group"
+                className="bg-green-500 hover:bg-green-600 text-white font-semibold relative z-10 px-6 overflow-hidden group"
               >
-                יצירת קשר
+                {ctaButtonText}
                 <span className="absolute -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-40 group-hover:animate-shine" />
               </Button>
             </div>
@@ -166,9 +176,9 @@ const Header = () => {
                 <div className="pt-4 mt-6 border-t border-oneshot-gold/20">
                   <Button
                     onClick={() => scrollToSection('contact-form')}
-                    className="w-full bg-oneshot-gold hover:bg-oneshot-gold/90 text-oneshot-dark font-semibold mt-2 relative overflow-hidden group"
+                    className="w-full bg-green-500 hover:bg-green-600 text-white font-semibold mt-2 relative overflow-hidden group"
                   >
-                    <span className="relative z-10">יצירת קשר</span>
+                    <span className="relative z-10">{ctaButtonText}</span>
                     <span className="absolute -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-40 group-hover:animate-shine" />
                   </Button>
                 </div>

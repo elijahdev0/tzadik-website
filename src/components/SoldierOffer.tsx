@@ -2,11 +2,8 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 
 const SoldierOffer = () => {
-  const scrollToContact = () => {
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-      contactForm.scrollIntoView({ behavior: 'smooth' });
-    }
+  const redirectToWhatsApp = () => {
+    window.location.href = "https://wa.me/972537124171"; // Israeli number in international format
   };
 
   return (
@@ -52,7 +49,7 @@ const SoldierOffer = () => {
             </p>
             
             <Button 
-              onClick={scrollToContact}
+              onClick={redirectToWhatsApp}
               className="cta-button bg-oneshot-green hover:bg-green-800 text-xl py-6 px-10 font-bold"
             >
               קבל הצעה מיוחדת לחיילים משוחררים

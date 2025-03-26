@@ -4,7 +4,7 @@ import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Benefits from '@/components/Benefits';
 import ProductShowcase from '@/components/ProductShowcase';
-import ContactForm from '@/components/ContactForm';
+import WhatsAppRedirect from '@/components/WhatsAppRedirect';
 import FAQ from '@/components/FAQ';
 import Footer from '@/components/Footer';
 import BackToTopButton from '@/components/BackToTopButton';
@@ -23,7 +23,7 @@ const Index = () => {
         <ProductShowcase />
       </div>
       <div id="contact-form">
-        <ContactForm />
+        <WhatsAppRedirect />
       </div>
       <div id="faq">
         <FAQ />

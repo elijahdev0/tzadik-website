@@ -9,6 +9,10 @@ import { motion } from 'framer-motion';
 import { HelpCircle } from 'lucide-react';
 
 const FAQ = () => {
+  const redirectToWhatsApp = () => {
+    window.location.href = "https://wa.me/972537124171"; // Israeli number in international format
+  };
+
   const faqItems = [
     {
       question: "כמה זמן לוקח לקבל רישיון לנשק?",
@@ -118,8 +122,11 @@ const FAQ = () => {
           className="mt-16 text-center"
         >
           <p className="text-xl text-white">יש לכם שאלה נוספת? אל תהססו לפנות אלינו</p>
-          <div className="inline-block mt-4 bg-oneshot-gold/10 px-6 py-3 rounded-full border border-oneshot-gold/20 text-oneshot-gold hover:bg-oneshot-gold/20 transition-all cursor-pointer">
-            צרו קשר עכשיו
+          <div 
+            onClick={redirectToWhatsApp}
+            className="inline-block mt-4 bg-oneshot-gold/10 px-6 py-3 rounded-full border border-oneshot-gold/20 text-oneshot-gold hover:bg-oneshot-gold/20 transition-all cursor-pointer"
+          >
+            פתיחת WhatsApp לשאלות
           </div>
         </motion.div>
       </div>
